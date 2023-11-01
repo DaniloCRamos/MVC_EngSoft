@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício de MVC</title>
+</head>
+<body>
+<h1>Lista de Jogos</h1>
+<table>
+    <thead>
+    <tr>
+        <th>Nome</th>
+        <th>Data de lançamento</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="jogo : ${jogos}">
+        <td th:text="${jogo.nome}"></td>
+        <td th:text="${jogo.dataLancamento}"></td>
+    </tr>
+    </tbody>
+</table>
+<hr>
+
+</body>
+</html>
